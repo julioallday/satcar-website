@@ -1,7 +1,10 @@
 <section class="busca-veiculos flex justify-center items-center w-full h-80 bg-red-800">
-  <div class="busca-container  bg-blue-900 h-4/5 w-4/5">
-    <span class="">BUSQUE AGORA SEU CARRO</span>
-    <div class="flex">
+  <div class="busca-container flex flex-col items-center justify-center  h-4/5 w-11/12 gap-8">
+    <div class="w-full flex justify-center text-white tracking-wider text-4xl">
+    <span class="">BUSQUE AGORA</span>
+    <p class="font-bold"> SEU CARRO</p>
+    </div>
+    <div class="flex flex-col md:flex-row justify-evenly items-center w-full">
       <input-buscador *ngFor="let dados of dadosInputs"
       [label]="dados.label"
       [placeholder]="dados.label"
