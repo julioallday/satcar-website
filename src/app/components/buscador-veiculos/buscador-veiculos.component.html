@@ -1,15 +1,30 @@
-<section class="busca-veiculos flex justify-center items-center w-full h-80 bg-red-800">
-  <div class="busca-container flex flex-col items-center justify-center  h-4/5 w-11/12 gap-8">
+<section
+  class="busca-veiculos flex justify-center items-center w-full h-80 bg-red-800"
+>
+  <div
+    class="busca-container flex flex-col items-center justify-center h-4/5 w-11/12 gap-8"
+  >
     <div class="w-full flex justify-center text-white tracking-wider text-4xl">
-    <span class="">BUSQUE AGORA</span>
-    <p class="font-bold"> SEU CARRO</p>
+      <span class="">BUSQUE AGORA</span>
+      <p class="font-bold"> SEU CARRO</p>
     </div>
-    <div class="flex flex-col md:flex-row justify-evenly items-center w-full">
-      <input-buscador *ngFor="let dados of dadosInputs"
-      [label]="dados.label"
-      [placeholder]="dados.label"
-      [opcoes]="dados.opcoes"
-    ></input-buscador>
+    <div
+      class="flex flex-col md:flex-row justify-center gap-3 items-center w-full"
+    >
+      <input-buscador
+        *ngFor="let dados of dadosInputs"
+        [label]="dados.label"
+        [placeholder]="dados.label"
+        [opcoes]="dados.opcoes"
+      ></input-buscador>
+    </div>
+    <div class="w-7/12">
+      <button
+        type="button"
+        class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+      >
+        Button
+      </button>
     </div>
   </div>
 </section>
