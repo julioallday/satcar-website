@@ -3,6 +3,7 @@ import { CarrosselComponent } from '../components/carrossel/carrossel.component'
 import { BuscadorVeiculosComponent } from '../components/buscador-veiculos/buscador-veiculos.component';
 import { InputBuscadorComponent } from '../components/input-buscador/input-buscador.component';
 import { PainelDescubraComponent } from '../components/painel-descubra/painel-descubra.component';
+import { PainelProcuradosComponent } from '../components/painel-procurados/painel-procurados.component';
 
 @Component({
   selector: 'inicio',
@@ -10,7 +11,8 @@ import { PainelDescubraComponent } from '../components/painel-descubra/painel-de
   imports: [CarrosselComponent,
     BuscadorVeiculosComponent,
     InputBuscadorComponent,
-    PainelDescubraComponent],
+    PainelDescubraComponent,
+    PainelProcuradosComponent],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })
