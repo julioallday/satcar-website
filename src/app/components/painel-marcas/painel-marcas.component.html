@@ -1,0 +1,11 @@
+<section class="w-full">
+  <h1>Escolha por marca</h1>
+  <div class="collection w-11/12 mx-auto  bg-slate-600">
+
+    <div class="grid grid-cols-4">
+        <img *ngFor="let card of marcas" class="w-60 bg-gray-200 p-4 rounded-lg" [src]="card.imagem" alt="Card Image {{card.nome}}" class="w-full h-auto">
+        <div class="text-center mt-2">
+      </div>
+    </div>
+  </div>
+</section>
