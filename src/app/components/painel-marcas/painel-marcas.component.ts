@@ -52,26 +52,6 @@ export class PainelMarcasComponent {
       nome: 'Kia',
       imagem: 'https://source.unsplash.com/random/400x400'
     },
-    {
-      id: 9,
-      nome: 'Mercedes-Benz',
-      imagem: 'https://source.unsplash.com/random/400x400'
-    },
-    {
-      id: 10,
-      nome: 'BMW',
-      imagem: 'https://source.unsplash.com/random/400x400'
-    },
-    {
-      id: 11,
-      nome: 'BMW',
-      imagem: 'https://source.unsplash.com/random/400x400'
-    },
-    {
-      id: 12,
-      nome: 'BMW',
-      imagem: 'https://source.unsplash.com/random/400x400'
-    }
 
   ]
 
