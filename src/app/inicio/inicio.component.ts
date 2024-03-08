@@ -5,6 +5,7 @@ import { InputBuscadorComponent } from '../components/input-buscador/input-busca
 import { PainelDescubraComponent } from '../components/painel-descubra/painel-descubra.component';
 import { PainelProcuradosComponent } from '../components/painel-procurados/painel-procurados.component';
 import { PainelMarcasComponent } from '../components/painel-marcas/painel-marcas.component';
+import { BuscaPrecosComponent } from '../components/busca-precos/busca-precos.component';
 
 @Component({
   selector: 'inicio',
@@ -14,7 +15,8 @@ import { PainelMarcasComponent } from '../components/painel-marcas/painel-marcas
     InputBuscadorComponent,
     PainelDescubraComponent,
     PainelProcuradosComponent,
-    PainelMarcasComponent],
+    PainelMarcasComponent,
+    BuscaPrecosComponent],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })
