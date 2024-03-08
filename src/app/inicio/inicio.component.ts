@@ -7,6 +7,7 @@ import { PainelProcuradosComponent } from '../components/painel-procurados/paine
 import { PainelMarcasComponent } from '../components/painel-marcas/painel-marcas.component';
 import { BuscaPrecosComponent } from '../components/busca-precos/busca-precos.component';
 import { DepoimentosComponent } from '../components/depoimentos/depoimentos.component';
+import { DiferenciaisComponent } from '../components/diferenciais/diferenciais.component';
 
 @Component({
   selector: 'inicio',
@@ -18,7 +19,8 @@ import { DepoimentosComponent } from '../components/depoimentos/depoimentos.comp
     PainelProcuradosComponent,
     PainelMarcasComponent,
     BuscaPrecosComponent,
-    DepoimentosComponent],
+    DepoimentosComponent,
+    DiferenciaisComponent],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })
