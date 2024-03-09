@@ -1,37 +1,60 @@
-<div class="lista-produtos  grid grid-cols-12 ">
-  <div class="h-screen col-span-3 bg-slate-200">
-
-  </div>
-  <div class="col-start-4 col-end-13 w-11/12  mx-auto flex flex-col bg-red-100">
-    <div class="options h-16 w-full">
-      controle ordem
+<div class="lista-produtos grid grid-cols-12">
+  <div class="h-screen col-span-3 bg-slate-200"></div>
+  <div class="col-start-4 col-end-13 w-11/12 mx-auto flex flex-col">
+    <div class="options flex justify-start items-end h-16 w-full ">
+     <div>
+       <select
+        class="py-3 px-4 pe-9 block w-full bg-gray-100 border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-gray-700 dark:border-transparent dark:text-gray-400 dark:focus:ring-gray-600"
+      >
+        <option selected>Ordem:</option>
+        <option>Crescente</option>
+        <option>Descrescente</option>
+      </select>
+     </div>
     </div>
     <!-- inicio lista veiculos -->
     <div class="listagem-veiculos w-full h-full bg-black/15">
       <div class="card">
         <div class="bg-white">
-          <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-12 lg:max-w-7xl lg:px-8">
-            <div *ngIf="veiculos[0]" class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-
+          <div
+            class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-12 lg:max-w-7xl lg:px-8"
+          >
+            <div
+              *ngIf="veiculos[0]"
+              class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8"
+            >
               <!-- inicio do card -->
               <div *ngFor="let item of veiculos" class="group relative">
-                <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                  <img src="../../assets/pexels-mike-bird-1007410.jpg" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                <div
+                  class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80"
+                >
+                  <img
+                    src="../../assets/pexels-mike-bird-1007410.jpg"
+                    alt="Front of men&#039;s Basic Tee in black."
+                    class="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                  />
                 </div>
                 <!-- inicio das infos card -->
                 <div class="mt-4 flex justify-between">
                   <div>
                     <h3 class="text-sm text-gray-700">
                       <a href="#">
-                        <span aria-hidden="true" class="absolute inset-0"></span>
-                        {{item.marca}} {{item.modelo}} {{item.ano}}
+                        <span
+                          aria-hidden="true"
+                          class="absolute inset-0"
+                        ></span>
+                        {{ item.marca }} {{ item.modelo }} {{ item.ano }}
                       </a>
                     </h3>
-                    <p class="mt-1 text-sm text-gray-500">{{item.caracteristicas}}</p>
+                    <p class="mt-1 text-sm text-gray-500">
+                      {{ item.caracteristicas }}
+                    </p>
                   </div>
-                  <p class="text-sm font-medium h-fill text-gray-900">R${{item.preco}}</p>
+                  <p class="text-lg font-semibold h-fill text-gray-900">
+                    R${{ item.preco }}
+                  </p>
                 </div>
-                <p class="mt-1 text-sm text-gray-500">{{item.opcionais}}</p>
+                <p class="mt-1 text-sm text-gray-500">{{ item.opcionais }}</p>
               </div>
               <!-- fim infos card -->
             </div>
@@ -39,5 +62,6 @@
         </div>
       </div>
       <!-- fim lista -->
+    </div>
   </div>
 </div>
