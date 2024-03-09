@@ -16,22 +16,21 @@ import { Observable } from 'rxjs';
 })
 export class DetalhesComponent {
 
-  veiculos: any = [];
-  veiculo$: any;
+  veiculoEscolhido: any;
+  veiculo$: Observable<any>;
 
   constructor(private dataService: DataService, private route: ActivatedRoute,
     private router: Router) {
 
     const veiculoId = Number(this.route.snapshot.paramMap.get('id'));
     this.veiculo$ = this.dataService.getVeiculo(veiculoId).subscribe((veiculo: any) => {
-      this.veiculos.push(veiculo);
-      console.log(veiculo);
+
+      this.mostrarVeiculo(veiculo);
+      return veiculo;
     });
-
-
-
   }
-
-
-
+  mostrarVeiculo(veiculo: any) {
+    this.veiculoEscolhido = veiculo;
+    console.log(this.veiculoEscolhido);
+  }
 }

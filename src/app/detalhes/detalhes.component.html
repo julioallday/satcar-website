@@ -1,4 +1,4 @@
-  
+
 
 
 <div class="w-full h-screen mt-28">
@@ -7,32 +7,18 @@
       <div class="pt-6">
         <!-- Image gallery -->
         <div
-          class="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-4xl lg:grid-cols-2 lg:gap-x-8 lg:px-8"
+          class="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-4xl lg:grid-cols-1 lg:gap-x-8 lg:px-8"
         >
           <div
             class="aspect-w-3 aspect-h-4 overflow-hidden rounded-lg lg:block"
           >
             <img
-              src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg"
+              src="{{veiculoEscolhido.imagem}}"
               alt="Two each of gray, white, and black shirts laying flat."
               class="h-full w-full object-cover object-center"
             />
           </div>
-          <div class="lg:grid lg:grid-cols-1 lg:gap-y-8">
-            <div class="aspect-w-4 aspect-h-4 overflow-hidden rounded-lg">
-              <img
-                src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg"
-                alt="Model wearing plain black basic tee."
-                class="h-full w-full object-cover object-center"
-              />
-            </div>
-            <div class="aspect-w-4 aspect-h-4 overflow-hidden rounded-lg">
-              <img
-                src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg"
-                alt="Model wearing plain gray basic tee."
-                class="h-full w-full object-cover object-center"
-              />
-            </div>
+
           </div>
         </div>
 
@@ -44,14 +30,14 @@
             <h1
               class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl"
             >
-              Hyundai HB20
+              {{veiculoEscolhido.marca}} {{veiculoEscolhido.modelo}}
             </h1>
           </div>
 
           <!-- Options -->
           <div class="mt-4 lg:row-span-3 lg:mt-0">
             <h2 class="sr-only">Product information</h2>
-            <p class="text-3xl tracking-tight text-gray-900">R$ 68.000,00</p>
+            <p class="text-3xl tracking-tight text-gray-900">R${{ veiculoEscolhido.preco}}</p>
           </div>
 
           <div
@@ -63,40 +49,17 @@
 
               <div class="space-y-6">
                 <p class="text-base text-gray-900">
-                  The Basic Tee 6-Pack allows you to fully express your vibrant
-                  personality with three grayscale options. Feeling adventurous?
-                  Put on a heather gray tee. Want to be a trendsetter? Try our
-                  exclusive colorway: &quot;Black&quot;. Need to add an extra
-                  pop of color to your outfit? Our white tee has you covered.
+                  {{veiculoEscolhido.caracteristicas}}
                 </p>
               </div>
             </div>
 
             <div class="mt-10">
-              <h3 class="text-sm font-medium text-gray-900">Highlights</h3>
+              <h3 class="text-sm font-medium text-gray-900">Informações:</h3>
 
-              <div class="mt-4">
-                <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
-                  <li class="text-gray-400">
-                    <span class="text-gray-600">Hand cut and sewn locally</span>
-                  </li>
+              <div class="mt-4 flex flex-col">
+                  Ano: {{veiculoEscolhido.ano}} Combustível:
 
-                  <li class="text-gray-400">
-                    <span class="text-gray-600"
-                      >Dyed with our proprietary colors</span
-                    >
-                  </li>
-
-                  <li class="text-gray-400">
-                    <span class="text-gray-600"
-                      >Pre-washed &amp; pre-shrunk</span
-                    >
-                  </li>
-
-                  <li class="text-gray-400">
-                    <span class="text-gray-600">Ultra-soft 100% cotton</span>
-                  </li>
-                </ul>
               </div>
             </div>
 
@@ -117,4 +80,3 @@
       </div>
     </div>
   </div>
-</div>
