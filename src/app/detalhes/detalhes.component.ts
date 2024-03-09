@@ -1,4 +1,8 @@
+import { DataService } from './../services/data.service';
 import { Component } from '@angular/core';
+
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Observable } from 'rxjs';
 
 
 
@@ -12,18 +16,22 @@ import { Component } from '@angular/core';
 })
 export class DetalhesComponent {
 
-  veiculo = {
-    marca: 'Chevrolet',
-    modelo: 'Onix',
-    caracteristicas: 'LT 1.0 Flex 12V Automático',
-    imagem: 'caminho-imagem',
-    ano: '2021',
-    combustivel: 'Flex',
-    cor: 'Branco',
-    km: '50000',
-    portas: '4 portas',
-    preco: '55.000,00',
-    opcionais: 'Ar condicionado, Direção Hidráulica, Vidro Elétrico, Airbag, Alarme'
-  };
+  veiculos: any = [];
+  veiculo$: any;
+
+  constructor(private dataService: DataService, private route: ActivatedRoute,
+    private router: Router) {
+
+    const veiculoId = Number(this.route.snapshot.paramMap.get('id'));
+    this.veiculo$ = this.dataService.getVeiculo(veiculoId).subscribe((veiculo: any) => {
+      this.veiculos.push(veiculo);
+      console.log(veiculo);
+    });
+
+
+
+  }
+
+
 
 }
