@@ -1,11 +1,13 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
+import { DetalhesComponent } from '../detalhes/detalhes.component';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 
 @Component({
   selector: 'estoque',
   standalone: true,
-  imports: [NgIf, NgFor],
+  imports: [NgIf, NgFor, RouterLink,RouterOutlet],
   templateUrl: './estoque.component.html',
   styleUrl: './estoque.component.css'
 })
