@@ -9,11 +9,14 @@ import { BuscaPrecosComponent } from '../components/busca-precos/busca-precos.co
 import { DepoimentosComponent } from '../components/depoimentos/depoimentos.component';
 import { DiferenciaisComponent } from '../components/diferenciais/diferenciais.component';
 import { RodapeComponent } from '../components/rodape/rodape.component';
+import { HeaderComponent } from '../components/header/header.component';
 
 @Component({
   selector: 'inicio',
   standalone: true,
-  imports: [CarrosselComponent,
+  imports: [
+    HeaderComponent,
+    CarrosselComponent,
     BuscadorVeiculosComponent,
     InputBuscadorComponent,
     PainelDescubraComponent,
