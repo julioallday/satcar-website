@@ -104,4 +104,21 @@ export class EstoqueComponent {
       opcionais: 'Ar condicionado, Direção Hidráulica, Vidro Elétrico, Alarme'
     }
   ];
+
+  filtros = [
+    {
+      label: 'Marca',
+      opcoes: ['Chevrolet', 'Ford', 'Volkswagen', 'Fiat', 'Toyota', 'Honda', '  Renault']
+    },
+    {
+      label: 'Modelo',
+      opcoes: ['Onix', 'Ka', 'Gol', 'Argo', 'Yaris', 'Fit', 'Kwid']
+    },
+    {
+      label: 'Preço',
+      opcoes: ['Até R$20.000,00', 'Até R$35.000,00', 'Até R$50.000,00', 'Até R$80.000,00',]
+    },
+
+
+  ]
 }
