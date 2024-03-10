@@ -1,56 +1,57 @@
 <div class="w-full h-screen mt-28">
-  <div class="w-11/12 flex justify-evenly items-center h-screen mx-auto rounded-md bg-">
-
-
-      <div class="pt-6">
-        <div class="flex flex-col-reverse gap-10 justify-center">
-          <!-- Miniaturas das imagens -->
-          <div class=" flex justify-center ">
-            <!-- Miniaturas -->
-            <div class="flex flex-wrap items-center justify-center sm:flex-nowrap space-x-4 ">
-              <img
-                *ngFor="let item of urlImagens; let i = index"
-                [ngClass]="{'transform scale-125 duration-100 shadow-2xl': chosenIdImagem == i}"
-
-                src="{{ item }}"
-                alt="Imagem 1"
-                class="w-20 h-auto cursor-pointer"
-                (click)="exibirImagem(item, i); "
-              />
-            </div>
-          </div>
-
-          <!-- Imagem principal -->
-          <div class="flex justify-center ml-8 h-2xl">
+  <div
+    class="w-11/12 gap-3 sm:flex sm:justify-evenly items-center h-screen mx-auto rounded-md bg-"
+  >
+    <div class="pt-6">
+      <div class="flex flex-col-reverse gap-10 justify-center">
+        <!-- Miniaturas das imagens -->
+        <div class="flex justify-center">
+          <!-- Miniaturas -->
+          <div
+            class="flex flex-wrap gap-4 items-center justify-center sm:flex-nowrap space-x-4"
+          >
             <img
-              [src]="imagemPrincipal"
-              alt="Imagem Principal"
-              class="w-80 h-80 object-cover overflow-hidden shadow-2xl"
+              *ngFor="let item of urlImagens; let i = index"
+              [ngClass]="{
+                'transform scale-125 duration-100 shadow-2xl':
+                  chosenIdImagem == i
+              }"
+              src="{{ item }}"
+              alt="Imagem 1"
+              class="w-20 h-auto my-3 cursor-pointer"
+              (click)="exibirImagem(item, i)"
             />
           </div>
         </div>
+
+        <!-- Imagem principal -->
+        <div class="flex justify-center ml-8 w-2xl">
+          <img
+            [src]="imagemPrincipal"
+            alt="Imagem Principal"
+            class="max-w-lg w-3/4 h-full object-cover overflow-hidden shadow-2xl"
+          />
+        </div>
       </div>
+    </div>
 
     <div class="bg-white">
-
-
       <!-- Product info -->
 
-      <div
-        class="mx-auto max-w-2xl px-4 pt-10 pb-16 sm:px-6"
-      >
+      <div class="mx-auto min-w-80 max-w-2xl px-4 pt-10 pb-16 sm:px-6">
         <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
           <h1
-            class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl"
+            class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-5xl lg:text-5xl"
           >
             {{ veiculoEscolhido.marca }} {{ veiculoEscolhido.modelo }}
           </h1>
         </div>
 
-        <!-- Options -->
         <div class="mt-4 lg:row-span-3 lg:mt-0">
           <h2 class="sr-only">Product information</h2>
-          <p class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight text-gray-900">
+          <p
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl tracking-tight text-gray-900"
+          >
             R${{ veiculoEscolhido.preco }}
           </p>
         </div>
@@ -63,33 +64,40 @@
             <h3 class="sr-only">Description</h3>
 
             <div class="space-y-6">
-              <p class="text-base tex text-gray-900">
+              <p class="text-2xl text-gray-900">
                 {{ veiculoEscolhido.caracteristicas }}
               </p>
             </div>
           </div>
-
           <div class="mt-10">
-            <h3 class="text-sm font-medium text-gray-900">Características:</h3>
-
-            <div class="mt-4 flex flex-col">
-              Ano: {{ veiculoEscolhido.ano }} <br>
-              Combustível:{{veiculoEscolhido.combustivel}} <br>
-              Cor: {{veiculoEscolhido.cor}} <br>
-              Km: {{veiculoEscolhido.km}} <br>
-              Portas: {{veiculoEscolhido.portas}} <br>
-
-
-            </div>
-          </div>
-
-          <div class="mt-10">
-            <h2 class="text-sm font-medium text-gray-900">Diferenciais:</h2>
-
             <div class="mt-4 space-y-6">
-              <p class="text-sm text-gray-600">
+              <p class="text-2xl text-gray-600">
                 {{ veiculoEscolhido.opcionais }}
               </p>
+            </div>
+          </div>
+          <div class="mt-10">
+            <div class="mt-4 grid grid-cols-2 text-zinc-800 text-3xl gap-2">
+              <div class="text-wrapper  flex gap-2 items-center">
+                <span class="font-bold">ANO: </span>
+                {{ veiculoEscolhido.ano }}
+              </div>
+              <div class="text-wrapper flex gap-2 items-center">
+                <span class="font-bold">COMBUSTÍVEL:</span
+                  >{{ veiculoEscolhido.combustivel }}
+                </div>
+                <div class="text-wrapper flex gap-2 items-center">
+                  <span class="font-bold">COR:</span>
+                  {{ veiculoEscolhido.cor }}
+              </div>
+              <div class="text-wrapper flex gap-2 items-center">
+                <span class="font-bold">KM: </span
+                  >{{ veiculoEscolhido.km }}
+              </div>
+              <div class="text-wrapper flex gap-2 items-center">
+                <span class="font-bold">PORTAS: </span
+                >{{ veiculoEscolhido.portas }}
+              </div>
             </div>
           </div>
         </div>
