@@ -10,6 +10,7 @@ import { DepoimentosComponent } from '../components/depoimentos/depoimentos.comp
 import { DiferenciaisComponent } from '../components/diferenciais/diferenciais.component';
 import { RodapeComponent } from '../components/rodape/rodape.component';
 import { HeaderComponent } from '../components/header/header.component';
+import { OfertasComponent } from '../components/ofertas/ofertas.component';
 
 @Component({
   selector: 'inicio',
@@ -17,12 +18,13 @@ import { HeaderComponent } from '../components/header/header.component';
   imports: [
     HeaderComponent,
     CarrosselComponent,
-    BuscadorVeiculosComponent,
-    InputBuscadorComponent,
-    PainelDescubraComponent,
-    PainelProcuradosComponent,
-    PainelMarcasComponent,
-    BuscaPrecosComponent,
+    // BuscadorVeiculosComponent,
+    // InputBuscadorComponent,
+    // PainelDescubraComponent,
+    // PainelProcuradosComponent,
+    // PainelMarcasComponent,
+    // BuscaPrecosComponent,
+    OfertasComponent,
     DepoimentosComponent,
     DiferenciaisComponent,
     RodapeComponent],

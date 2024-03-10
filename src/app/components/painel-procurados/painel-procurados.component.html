@@ -3,20 +3,19 @@
 >
   <h2 class="text-3xl font-bold text-center mb-8">Mais Procurados</h2>
 
-  <div class="grid grid-cols-4 gap-8 h-auto">
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 h-auto">
     <div
       *ngFor="let imagem of imagens; let i = index"
-      class="group relative max-h-48"
+      class="group relative max-h-80"
       id="card-{{ i }}"
     >
       <img
         src="{{ imagem.reference }}"
         alt="{{ imagem.id }}"
-        class="rounded-lg w-48 h-48 object-cover transition-transform transform scale-105 group-hover:scale-90"
+        class="rounded-lg w-64 h-64 object-cover transition-transform transform scale-105 group-hover:scale-90"
       />
       <div
-        class="absolute inset-0 flex h-48 items-center justify-center cursor-pointer opacity-0
-         rounded-lg group-hover:opacity-100 transition-opacity bg-red-600 bg-opacity-100 "
+        class="absolute inset-0 flex h-64 items-center justify-center cursor-pointer opacity-0 rounded-lg group-hover:opacity-100 transition-opacity bg-red-600 bg-opacity-100"
       >
         <span class="text-white text-xl font-bold text-center tracking-wider"
           >Clique para mais detalhes</span

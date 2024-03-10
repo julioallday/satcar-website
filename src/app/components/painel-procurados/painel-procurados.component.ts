@@ -23,10 +23,6 @@ export class PainelProcuradosComponent {
       reference: "https://source.unsplash.com/random/360x360",
       id: 3
     },
-    {
-      reference: "https://source.unsplash.com/random/360x360",
-      id: 4
-    },
   ]
 
 }
