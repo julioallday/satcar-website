@@ -1,82 +1,96 @@
-
-
-
 <div class="w-full h-screen mt-28">
   <div class="w-11/12 h-screen mx-auto bg-red-500">
     <div class="bg-white">
+
+
+      <!-- Product info -->
+
       <div class="pt-6">
-        <!-- Image gallery -->
-        <div
-          class="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-4xl lg:grid-cols-1 lg:gap-x-8 lg:px-8"
-        >
-          <div
-            class="aspect-w-3 aspect-h-4 overflow-hidden rounded-lg lg:block"
-          >
+        <div class="flex flex-col-reverse gap-10 justify-center">
+          <!-- Miniaturas das imagens -->
+          <div class="flex justify-center">
+            <!-- Miniaturas -->
+            <div class="space-x-4 flex">
+              <img
+                *ngFor="let item of urlImagens; let i = index"
+                [ngClass]="{'transform scale-125  duration-100': chosenIdImagem == i}"
+                
+                src="{{ item }}"
+                alt="Imagem 1"
+                class="w-20 h-auto cursor-pointer"
+                (click)="exibirImagem(item, i); "
+              />
+            </div>
+          </div>
+
+          <!-- Imagem principal -->
+          <div class="flex justify-center ml-8 h-2xl">
             <img
-              src="{{veiculoEscolhido.imagem}}"
-              alt="Two each of gray, white, and black shirts laying flat."
-              class="h-full w-full object-cover object-center"
+              [src]="imagemPrincipal"
+              alt="Imagem Principal"
+              class="w-80 h-80 object-cover overflow-hidden"
             />
           </div>
-
-          </div>
+        </div>
+      </div>
+      <div
+        class="mx-auto max-w-2xl px-4 pt-10 pb-16 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-24"
+      >
+        <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
+          <h1
+            class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl"
+          >
+            {{ veiculoEscolhido.marca }} {{ veiculoEscolhido.modelo }}
+          </h1>
         </div>
 
-        <!-- Product info -->
+        <!-- Options -->
+        <div class="mt-4 lg:row-span-3 lg:mt-0">
+          <h2 class="sr-only">Product information</h2>
+          <p class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight text-gray-900">
+            R${{ veiculoEscolhido.preco }}
+          </p>
+        </div>
+
         <div
-          class="mx-auto max-w-2xl px-4 pt-10 pb-16 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-24"
+          class="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pb-16 lg:pr-8"
         >
-          <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-            <h1
-              class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl"
-            >
-              {{veiculoEscolhido.marca}} {{veiculoEscolhido.modelo}}
-            </h1>
+          <!-- Description and details -->
+          <div>
+            <h3 class="sr-only">Description</h3>
+
+            <div class="space-y-6">
+              <p class="text-base tex text-gray-900">
+                {{ veiculoEscolhido.caracteristicas }}
+              </p>
+            </div>
           </div>
 
-          <!-- Options -->
-          <div class="mt-4 lg:row-span-3 lg:mt-0">
-            <h2 class="sr-only">Product information</h2>
-            <p class="text-3xl tracking-tight text-gray-900">R${{ veiculoEscolhido.preco}}</p>
+          <div class="mt-10">
+            <h3 class="text-sm font-medium text-gray-900">Características:</h3>
+
+            <div class="mt-4 flex flex-col">
+              Ano: {{ veiculoEscolhido.ano }} <br>
+              Combustível:{{veiculoEscolhido.combustivel}} <br>
+              Cor: {{veiculoEscolhido.cor}} <br>
+              Km: {{veiculoEscolhido.km}} <br>
+              Portas: {{veiculoEscolhido.portas}} <br>
+
+
+            </div>
           </div>
 
-          <div
-            class="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pb-16 lg:pr-8"
-          >
-            <!-- Description and details -->
-            <div>
-              <h3 class="sr-only">Description</h3>
+          <div class="mt-10">
+            <h2 class="text-sm font-medium text-gray-900">Diferenciais:</h2>
 
-              <div class="space-y-6">
-                <p class="text-base text-gray-900">
-                  {{veiculoEscolhido.caracteristicas}}
-                </p>
-              </div>
-            </div>
-
-            <div class="mt-10">
-              <h3 class="text-sm font-medium text-gray-900">Informações:</h3>
-
-              <div class="mt-4 flex flex-col">
-                  Ano: {{veiculoEscolhido.ano}} Combustível:
-
-              </div>
-            </div>
-
-            <div class="mt-10">
-              <h2 class="text-sm font-medium text-gray-900">Details</h2>
-
-              <div class="mt-4 space-y-6">
-                <p class="text-sm text-gray-600">
-                  The 6-Pack includes two black, two white, and two heather gray
-                  Basic Tees. Sign up for our subscription service and be the
-                  first to get new, exciting colors, like our upcoming
-                  &quot;Charcoal Gray&quot; limited release.
-                </p>
-              </div>
+            <div class="mt-4 space-y-6">
+              <p class="text-sm text-gray-600">
+                {{ veiculoEscolhido.opcionais }}
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
