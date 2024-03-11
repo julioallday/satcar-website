@@ -1,9 +1,11 @@
 <div class="w-full h-screen mt-28">
   <div
-    class="w-11/12 gap-3 sm:flex sm:justify-evenly items-center h-screen mx-auto rounded-md bg-"
+    class="w-11/12 gap-3 sm:flex sm:justify-evenly items-center h-screen mx-auto rounded-md"
   >
     <div class="pt-6 h-fit">
-      <div class="flex flex-col-reverse gap-10 justify-center h-96 min-w-80 max-w-2xl px-4 pt-10 pb-16 sm:px-6">
+      <div
+        class="flex flex-col-reverse gap-10 justify-center h-96 min-w-80 max-w-2xl px-4 pt-10 pb-16 sm:px-6"
+      >
         <!-- Miniaturas das imagens -->
         <div class="flex justify-center">
           <!-- Miniaturas -->
@@ -29,19 +31,21 @@
           <img
             [src]="imagemPrincipal"
             alt="Imagem Principal"
-            class="w-96 h-96 overflow-hidden shadow-2xl"
+            class="w-80 h-80 overflow-hidden shadow-2xl"
           />
         </div>
       </div>
     </div>
 
-    <div class="bg-white">
+    <div class="">
       <!-- Product info -->
 
-      <div class="mx-auto min-w-80 max-w-sm h-96 px-4 pt-10 pb-16 sm:px-6">
+      <div
+        class="card-produto mx-auto min-w-80 max-w-sm bg-slate-600 rounded-lg px-4 pt-10 pb-6 sm:px-6 mt-18 lg:mt-30"
+      >
         <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
           <h1
-            class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-5xl lg:text-5xl"
+            class="text-2xl font-bold tracking-wide text-slate-100 sm:text-2xl md:text-3xl lg:text-4xl"
           >
             {{ veiculoEscolhido.marca }} {{ veiculoEscolhido.modelo }}
           </h1>
@@ -50,53 +54,191 @@
         <div class="mt-4 lg:row-span-3 lg:mt-0">
           <h2 class="sr-only">Product information</h2>
           <p
-            class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl tracking-tight text-gray-900"
+            class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tight text-gray-900"
           >
-            R${{ veiculoEscolhido.preco }}
+            <span class=""> R$ </span>
+            <span class="text-green-200">{{ veiculoEscolhido.preco }}</span>
           </p>
         </div>
 
         <div
-          class="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pb-16 lg:pr-8"
+          class="py-4 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pb-16 lg:pr-8"
         >
           <!-- Description and details -->
           <div>
             <h3 class="sr-only">Description</h3>
 
             <div class="space-y-6">
-              <p class="text-2xl text-gray-900">
+              <p class="text-xl text-slate-100">
                 {{ veiculoEscolhido.caracteristicas }}
               </p>
             </div>
           </div>
-          <div class="mt-10">
+          <div class="mt-4">
             <div class="mt-4 space-y-6">
-              <p class="text-2xl text-gray-600">
+              <p class="text-xl text-slate-100">
                 {{ veiculoEscolhido.opcionais }}
               </p>
             </div>
           </div>
-          <div class="mt-10">
-            <div class="mt-4 grid grid-cols-2 text-zinc-800 text-wrap md:text-xl gap-2">
-              <div class="text-wrapper  flex flex-col gap-2 items-start">
+          <div class="mt-4">
+            <div
+              class="mt-4 grid grid-cols-2 text-zinc-800 text-wrap md:text-xl gap-2 tracking-wider"
+            >
+              <div class="text-wrapper flex flex-col items-start">
                 <span class="font-bold">ANO: </span>
-                {{ veiculoEscolhido.ano }}
+
+                <span class="text-slate-100">{{ veiculoEscolhido.ano }}</span>
               </div>
-              <div class="text-wrapper flex flex-col gap-2 items-start">
-                <span class="font-bold">COMBUSTÍVEL:</span
-                  >{{ veiculoEscolhido.combustivel }}
-                </div>
-                <div class="text-wrapper flex flex-col gap-2 items-start">
-                  <span class="font-bold">COR:</span>
-                  {{ veiculoEscolhido.cor }}
+              <div class="text-wrapper flex flex-col items-start">
+                <span class="font-bold">COMBUSTÍVEL:</span>
+                <span class="text-slate-100">{{
+                  veiculoEscolhido.combustivel
+                }}</span>
               </div>
-              <div class="text-wrapper flex flex-col gap-2 items-start">
+              <div class="text-wrapper flex flex-col items-start">
+                <span class="font-bold">COR:</span>
+                <span class="text-slate-100">{{ veiculoEscolhido.cor }}</span>
+              </div>
+              <div class="text-wrapper flex flex-col items-start">
                 <span class="font-bold">KM: </span
-                  >{{ veiculoEscolhido.km }}
+                ><span class="text-slate-100">{{ veiculoEscolhido.km }}</span>
               </div>
-              <div class="text-wrapper flex flex-col gap-2 items-start">
+              <div class="text-wrapper flex flex-col items-start">
                 <span class="font-bold">PORTAS: </span
-                >{{ veiculoEscolhido.portas }}
+                ><span class="text-slate-100">{{
+                  veiculoEscolhido.portas
+                }}</span>
+              </div>
+              <button
+                data-hs-overlay="#hs-focus-management-modal"
+                type="button"
+                class="w-full col-span-2 items-self-end mt-4 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-amber-500 text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+              >
+                ENVIAR PROPOSTA
+              </button>
+
+              <div
+                id="hs-focus-management-modal"
+                class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none"
+              >
+                <div
+                  class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto"
+                >
+                  <div
+                    class="flex flex-col bg-white border shadow-sm rounded-xl pointer-events-auto dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]"
+                  >
+                    <div
+                      class="flex justify-between items-center py-3 px-4 border-b dark:border-gray-700"
+                    >
+                      <h3 class="font-bold text-gray-800 dark:text-white">
+                        Proposta {{ veiculoEscolhido.marca }}
+                        {{ veiculoEscolhido.modelo }} {{ veiculoEscolhido.ano }}
+                      </h3>
+                      <button
+                        type="button"
+                        class="flex justify-center items-center size-7 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                        data-hs-overlay="#hs-focus-management-modal"
+                      >
+                        <span class="sr-only">Close</span>
+                        <svg
+                          class="flex-shrink-0 size-4"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M18 6 6 18" />
+                          <path d="m6 6 12 12" />
+                        </svg>
+                      </button>
+                    </div>
+                    <form
+                      [formGroup]="form"
+                      (ngSubmit)="onSubmit()"
+                      class="p-4 overflow-y-auto"
+                    >
+                      <!-- input -->
+                      <label
+                        for="input-label-nome"
+                        class="block text-sm font-medium mb-2 dark:text-white"
+                        >Nome Completo</label
+                      >
+                      <input
+                        formControlName="nome"
+                        type="text"
+                        id="input-label-nome"
+                        class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+                        autofocus
+                      />
+
+                      <!-- input' -->
+                      <label
+                        for="input-label-email"
+                        class="block text-sm font-medium mb-2 dark:text-white"
+                        >Email</label
+                      >
+                      <input
+                        formControlName="email"
+                        type="email"
+                        id="input-label-email"
+                        class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+                        placeholder="you@site.com"
+                      />
+
+                      <!-- input -->
+                      <label
+                        for="input-label-telefone"
+                        class="block text-sm font-medium mb-2 dark:text-white"
+                        >telefone</label
+                      >
+                      <input
+                        formControlName="telefone"
+                        type="email"
+                        id="input-label-telefone"
+                        class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+                        placeholder="(xx)xxxxx-xxxx"
+                      />
+
+                      <!-- textarea -->
+                      <label
+                        for="input-label-mensagem"
+                        class="block text-sm font-medium mb-2 dark:text-white"
+                        >Mensagem</label
+                      >
+                      <textarea
+                        formControlName="mensagem"
+                        id="input-label-mensagem"
+                        class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+                        placeholder="Escreva uma mensagem para a loja.."
+                      ></textarea>
+
+                      <button
+                      [disabled]="!form.valid"
+                        type="submit"
+                        class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border my-4 border-transparent bg-green-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                      >
+                        Enviar
+                      </button>
+                    </form>
+                    <div
+                      class="flex justify-end items-center gap-x-2 py-3 px-4 border-t dark:border-gray-700"
+                    >
+                      <button
+                        type="button"
+                        class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-red-600 text-slate-200 shadow-sm hover:bg-black disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                        data-hs-overlay="#hs-focus-management-modal"
+                      >
+                        Cancelar
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
