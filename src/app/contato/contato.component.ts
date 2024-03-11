@@ -43,11 +43,9 @@ export class ContatoComponent {
       mensagem: this.form.value.mensagem
     } 
     const url = this.criarURL(dados);
-    window.location.href = url;
+    window.open(url, '_blank');
   }
   private criarURL(dados: any): string {
-    // Aqui você pode implementar a lógica para criar a URL baseada nos dados fornecidos
-    // Por exemplo:
     const baseURL = 'https://wa.me/5521982106192?text=';
     const mensagem = `Olá! Meu nome é ${dados.nome},
     venho por intermédio do  site,
