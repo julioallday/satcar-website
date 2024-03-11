@@ -7,15 +7,16 @@
       Fale com um de nossos colaboradores.
     </h3>
   </div>
-''
+
   <div class="grid grid-cols-1 sm:grid-cols-2">
     <form
-      action="#"
-      method="POST"
-      class="mx-auto w-full bg-neutral-800 p-8 rounded-lg mt-16 max-w-xl sm:mt-20"
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+      class="mx-auto w-full bg-slate-700 p-8 rounded-lg mt-16 max-w-xl sm:mt-20"
     >
       <div class="relative">
         <input
+        formControlName="nome"
           type="text"
           id="hs-floating-underline-input-name"
           class="peer py-4 px-0 block w-full bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-200 text-sm placeholder:text-transparent focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none dark:border-b-gray-700 dark:text-gray-400 dark:focus:ring-gray-600 dark:focus:border-b-gray-600 focus:pt-6 focus:pb-2 [&:not(:placeholder-shown)]:pt-6 [&:not(:placeholder-shown)]:pb-2 autofill:pt-6 autofill:pb-2"
@@ -32,6 +33,7 @@
       <!-- Floating Input -->
       <div class="relative">
         <input
+        formControlName="email"
           type="email"
           id="hs-floating-underline-input-email"
           class="peer py-4 px-0 block w-full bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-200 text-sm placeholder:text-transparent focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none dark:border-b-gray-700 dark:text-gray-400 dark:focus:ring-gray-600 dark:focus:border-b-gray-600 focus:pt-6 focus:pb-2 [&:not(:placeholder-shown)]:pt-6 [&:not(:placeholder-shown)]:pb-2 autofill:pt-6 autofill:pb-2"
@@ -47,6 +49,7 @@
       <!-- Floating Input -->
       <div class="relative">
         <input
+        formControlName="telefone"
           type="text"
           id="hs-floating-underline-input-telefone"
           class="peer py-4 px-0 block w-full bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-200 text-sm placeholder:text-transparent focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none dark:border-b-gray-700 dark:text-gray-400 dark:focus:ring-gray-600 dark:focus:border-b-gray-600 focus:pt-6 focus:pb-2 [&:not(:placeholder-shown)]:pt-6 [&:not(:placeholder-shown)]:pb-2 autofill:pt-6 autofill:pb-2"
@@ -60,13 +63,18 @@
       </div>
       <!-- End Floating Input -->
       <textarea
+      formControlName="mensagem"
         class="py-3 px-0 block w-full bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-200 text-sm focus:border-blue-500 focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0 disabled:opacity-50 disabled:pointer-events-none dark:border-b-gray-700 dark:text-white dark:focus:ring-gray-600 dark:focus:border-b-gray-600"
         rows="3"
         placeholder="Digite sua mensagem"
       ></textarea>
-      <button type="button" class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-  ENVIAR MENSAGEM
-</button>
+      <button
+        [disabled]="!form.valid"
+        type="submit"
+        class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+      >
+        ENVIAR MENSAGEM
+      </button>
     </form>
 
     <div class="mt-16 max-w-xl mx-auto text-center">
