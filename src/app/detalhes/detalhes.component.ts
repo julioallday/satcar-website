@@ -29,8 +29,8 @@ export class DetalhesComponent {
     'https://source.unsplash.com/random/500x500'
   ];
 
-  imagemPrincipal: string = this.urlImagens[0];
-  chosenIdImagem: number = this.urlImagens.indexOf(this.imagemPrincipal);
+  imagemPrincipal: string = '';
+  chosenIdImagem: number = 0;
   submitted = false;
   form: FormGroup;
 
@@ -46,9 +46,9 @@ export class DetalhesComponent {
     });
 
 
-    const veiculoId = Number(this.route.snapshot.paramMap.get('id'));
+    const veiculoId = String(this.route.snapshot.paramMap.get('id'));
     this.veiculo$ = this.dataService.getVeiculo(veiculoId).subscribe((veiculo: any) => {
-
+      this.imagemPrincipal = veiculo.imagens[0];
       this.mostrarVeiculo(veiculo);
       return veiculo;
     });
@@ -57,6 +57,7 @@ export class DetalhesComponent {
   }
   mostrarVeiculo(veiculo: any) {
     this.veiculoEscolhido = veiculo;
+    this.urlImagens = this.veiculoEscolhido.imagens;
     console.log(this.veiculoEscolhido);
   }
   exibirImagem(url: string, index: number) {

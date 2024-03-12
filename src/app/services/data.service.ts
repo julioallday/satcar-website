@@ -12,7 +12,7 @@ export class DataService {
   getVeiculos(): Observable<any[]> {
     return this.http.get<any[]>('../../assets/veiculos.json');
   }
-  getVeiculo(id: number): any {
+  getVeiculo(id: string): any {
     return this.http.get<any[]>('../../assets/veiculos.json').pipe(
       map((listaDeVeiculos: any[]) => listaDeVeiculos.find((el: any) => el.id == id))
     )
