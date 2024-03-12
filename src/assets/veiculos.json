@@ -1,6 +1,6 @@
 [
   {
-    "id": "8b1ad685-67eb-4d24-a74f-0d0e9d689aa5",
+    "id": "8b1ad685-67eb-4d24-a74f-0d0e9sd5f4sdf",
     "data_hora": "2024/03/11 2:49:37 PM GMT-3",
     "imagens": [
       "assets/img-veiculos/ASTRA-2004-PRATA-1.jpg",
@@ -21,17 +21,13 @@
     "cambio": "AUTOMATICO",
     "km": "128.000",
     "portas": "4",
-    "caracteristicas": [
-      "CHAVE RESERVA",
-      "IPVA PAGO",
-      "LICENCIADO"
-    ],
+    "caracteristicas": ["CHAVE RESERVA", "IPVA PAGO", "LICENCIADO"],
     "opcionais": [
       "AIRBAG MOTORISTA",
       "AIRBAG PASSAGEIRO",
       "ALARME",
-      "AR CONDINIONADO",
-      "AR CONDINIONADO DIGITAL",
+      "AR CONDICIONADO",
+      "AR CONDICIONADO DIGITAL",
       "BANCO DO MOTORISRA COM AJUSTE DE ALTURA",
       "BANCOS DE COURO",
       "CD PLAYER COM MP3",
@@ -51,15 +47,14 @@
     ]
   },
   {
-    "id": "8b1ad685-67eb-4d24-a74f-0d0e9d689aa5",
+    "id": "8b1ad685-67eb-4d24-a74f-0d689a0e0d6899da5",
     "data_hora": "2024/03/11 3:56:12 PM GMT-3",
     "imagens": [
-     "assets/img-veiculos/SYMBOL-2013-PRATA-1.jpg",
-     "assets/img-veiculos/SYMBOL-2013-PRATA-2.jpg",
-     "assets/img-veiculos/SYMBOL-2013-PRATA-3.jpg",
-     "assets/img-veiculos/SYMBOL-2013-PRATA-4.jpg",
-     "assets/img-veiculos/SYMBOL-2013-PRATA-5.jpg"
-
+      "assets/img-veiculos/SYMBOL-2013-PRATA-1.jpg",
+      "assets/img-veiculos/SYMBOL-2013-PRATA-2.jpg",
+      "assets/img-veiculos/SYMBOL-2013-PRATA-3.jpg",
+      "assets/img-veiculos/SYMBOL-2013-PRATA-4.jpg",
+      "assets/img-veiculos/SYMBOL-2013-PRATA-5.jpg"
     ],
     "placa": "KOX6H83",
     "marca": "RENAULT",
@@ -73,17 +68,12 @@
     "cambio": "MANUAL",
     "km": "102.000",
     "portas": "4",
-    "caracteristicas": [
-      "CHAVE RESERVA",
-      "IPVA PAGO",
-      "LICENCIADO",
-      "MANUAL"
-    ],
+    "caracteristicas": ["CHAVE RESERVA", "IPVA PAGO", "LICENCIADO", "MANUAL"],
     "opcionais": [
       "AIRBAG MOTORISTA",
       "AIRBAG PASSAGEIRO",
       "ALARME",
-      "AR CONDINIONADO",
+      "AR CONDICIONADO",
       "BANCO DO MOTORISRA COM AJUSTE DE ALTURA",
       "CAMERA DE RÉ",
       "DESEMBAÇADOR TRASEIRO",
@@ -102,7 +92,7 @@
     ]
   },
   {
-    "id": "8b1ad685-67eb-4d24-a74f-0d0e9d689aa5",
+    "id": "8b0e9d685-67eb-4d24-a74f-0e9d0e9d0e9d",
     "data_hora": "2024/03/11 4:02:11 PM GMT-3",
     "imagens": [
       "assets/img-veiculos/UNO-2014-PRATA-1.jpg",
@@ -116,23 +106,19 @@
     "modelo": "UNO",
     "ano": "2014",
     "versao": "1.0 VIVACE",
-    "preco": "299O0",
+    "preco": "29.900",
     "observacao": "OTIMO ESTADO",
     "combustivel": "FLEX E GNV",
     "cor": "PRATA",
     "cambio": "MANUAL",
     "km": "140.000",
     "portas": "4",
-    "caracteristicas": [
-      "CHAVE RESERVA",
-      "IPVA PAGO",
-      "LICENCIADO"
-    ],
+    "caracteristicas": ["CHAVE RESERVA", "IPVA PAGO", "LICENCIADO"],
     "opcionais": [
       "AIRBAG MOTORISTA",
       "AIRBAG PASSAGEIRO",
       "ALARME",
-      "AR CONDINIONADO",
+      "AR CONDICIONADO",
       "BANCO DO MOTORISRA COM AJUSTE DE ALTURA",
       "CD PLAYER COM MP3",
       "DIREÇÃO HIDRAULICA",
@@ -183,7 +169,7 @@
       "AIRBAG MOTORISTA",
       "AIRBAG PASSAGEIRO",
       "ALARME",
-      "AR CONDINIONADO",
+      "AR CONDICIONADO",
       "BANCO DO MOTORISRA COM AJUSTE DE ALTURA",
       "CD PLAYER COM MP3",
       "DESEMBAÇADOR TRASEIRO",
@@ -202,7 +188,7 @@
     ]
   },
   {
-    "id": "8b1ad685-67eb-4d24-a74f-0d0e9d689aa5",
+    "id": "8b1ad685-67eb-4d24-a74f-0d0es5s5a55dasd89aa5",
     "data_hora": "2024/03/11 7:16:26 PM GMT-3",
     "imagens": [
       "assets/img-veiculos/MOBI-2021-CINZA-1.jpg",
@@ -235,7 +221,7 @@
       "AIRBAG MOTORISTA",
       "AIRBAG PASSAGEIRO",
       "ALARME",
-      "AR CONDINIONADO",
+      "AR CONDICIONADO",
       "CD PLAYER COM MP3",
       "COMPUTADOR DE BORDO",
       "DESEMBAÇADOR TRASEIRO",
@@ -250,7 +236,7 @@
     ]
   },
   {
-    "id": "8b1ad685-67eb-4d24-a74f-0d0e9d689aa5",
+    "id": "8b1ad685-67eb-4d24-a74f-5sd5s2dsf5s2dad5",
     "data_hora": "2024/03/11 7:22:46 PM GMT-3",
     "imagens": [
       "assets/img-veiculos/ONIX-2018-VERMELHO-1.jpg",
@@ -281,7 +267,7 @@
       "AIRBAG MOTORISTA",
       "AIRBAG PASSAGEIRO",
       "ALARME",
-      "AR CONDINIONADO",
+      "AR CONDICIONADO",
       "BANCO DO MOTORISRA COM AJUSTE DE ALTURA",
       "BANCOS DE COURO",
       "CAMERA DE RÉ",
@@ -308,7 +294,7 @@
     ]
   },
   {
-    "id": "8b1ad685-67eb-4d24-a74f-0d0e9d689aa5",
+    "id": "5as5d5a5s5d-67eb-4d24-a74f-0d0e9d689aa5",
     "data_hora": "2024/03/11 7:49:34 PM GMT-3",
     "imagens": [
       "assets/img-veiculos/IX35-2012-PRATA-1.jpg",
@@ -342,7 +328,7 @@
       "AIRBAG MOTORISTA",
       "AIRBAG PASSAGEIRO",
       "ALARME",
-      "AR CONDINIONADO",
+      "AR CONDICIONADO",
       "AR QUENTE",
       "BANCO DO MOTORISRA COM AJUSTE DE ALTURA",
       "BANCOS DE COURO",
@@ -370,15 +356,14 @@
     ]
   },
   {
-    "id": "8b1ad685-67eb-4d24-a74f-0d0e9d689aa5",
+    "id": "8b1ad685-67eb-4d24-5sdasd-g4d5gh5dr2",
     "data_hora": "2024/03/11 8:19:27 PM GMT-3",
     "imagens": [
-      "assets/img-veiculos/COBALT-BRANCO-1",
-      "assets/img-veiculos/COBALT-BRANCO-2",
-      "assets/img-veiculos/COBALT-BRANCO-3",
-      "assets/img-veiculos/COBALT-BRANCO-4",
-      "assets/img-veiculos/COBALT-BRANCO-5"
-
+      "assets/img-veiculos/COBALT-BRANCO-1.jpg",
+      "assets/img-veiculos/COBALT-BRANCO-2.jpg",
+      "assets/img-veiculos/COBALT-BRANCO-3.jpg",
+      "assets/img-veiculos/COBALT-BRANCO-4.jpg",
+      "assets/img-veiculos/COBALT-BRANCO-5.jpg"
     ],
     "placa": "OXK7B47",
     "marca": "CHEVROLET",
@@ -403,7 +388,7 @@
       "AIRBAG MOTORISTA",
       "AIRBAG PASSAGEIRO",
       "ALARME",
-      "AR CONDINIONADO",
+      "AR CONDICIONADO",
       "BANCO DO MOTORISRA COM AJUSTE DE ALTURA",
       "CD PLAYER COM MP3",
       "COMPUTADOR DE BORDO",
@@ -421,14 +406,14 @@
     ]
   },
   {
-    "id": "8b1ad685-67eb-4d24-a74f-0d0e9d689aa5",
+    "id": "sf45sd45sdf12-67eb-4d24-a74f-sdas255dd12f",
     "data_hora": "2024/03/11 8:24:24 PM GMT-3",
     "imagens": [
-      "assets/img-veiculos/CRUZE-2012-CINZA-1",
-      "assets/img-veiculos/CRUZE-2012-CINZA-2",
-      "assets/img-veiculos/CRUZE-2012-CINZA-3",
-      "assets/img-veiculos/CRUZE-2012-CINZA-4",
-      "assets/img-veiculos/CRUZE-2012-CINZA-5"
+      "assets/img-veiculos/CRUZE-2012-CINZA-1.jpg",
+      "assets/img-veiculos/CRUZE-2012-CINZA-2.jpg",
+      "assets/img-veiculos/CRUZE-2012-CINZA-3.jpg",
+      "assets/img-veiculos/CRUZE-2012-CINZA-4.jpg",
+      "assets/img-veiculos/CRUZE-2012-CINZA-5.jpg"
     ],
     "placa": "KZJ5504",
     "marca": "CHEVROLET",
@@ -453,7 +438,7 @@
       "AIRBAG MOTORISTA",
       "AIRBAG PASSAGEIRO",
       "ALARME",
-      "AR CONDINIONADO",
+      "AR CONDICIONADO",
       "BANCO DO MOTORISRA COM AJUSTE DE ALTURA",
       "BANCOS DE COURO",
       "CD PLAYER COM MP3",
