@@ -14,6 +14,8 @@ import { Router } from '@angular/router';
 export class ContatoComponent {
   form: FormGroup;
   submitted: boolean = false;
+  telefoneContato: string = '5521983130291';
+  emailContato: string = 'satcarveiculos@yahoo.com';
 
   constructor(private router: Router, private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
@@ -46,7 +48,7 @@ export class ContatoComponent {
     window.open(url, '_blank');
   }
   private criarURL(dados: any): string {
-    const baseURL = 'https://wa.me/5521982106192?text=';
+    const baseURL = `https://wa.me/${this.telefoneContato}?text=`;
     const mensagem = `Olá! Meu nome é ${dados.nome},
     venho por intermédio do  site,
     meu email é: ${dados.email},
